@@ -1,0 +1,32 @@
+nohup: ignoring input
+2025-09-22 15:32:45,695 - INFO - Starting MCPO Server...
+2025-09-22 15:32:45,695 - INFO -   Name: MCP OpenAPI Proxy
+2025-09-22 15:32:45,695 - INFO -   Version: 1.0
+2025-09-22 15:32:45,695 - INFO -   Description: Automatically generated API from MCP Tool Schemas
+2025-09-22 15:32:45,695 - INFO -   Hostname: openwebui
+2025-09-22 15:32:45,695 - INFO -   Port: 9999
+2025-09-22 15:32:45,695 - INFO -   API Key: Provided
+2025-09-22 15:32:45,695 - INFO -   CORS Allowed Origins: ['*']
+2025-09-22 15:32:45,695 - INFO -   Path Prefix: /
+2025-09-22 15:32:45,696 - INFO - Configuring for a single StreamableHTTP MCP Server with URL http://127.0.0.1:8000/mcp
+2025-09-22 15:32:45,696 - INFO - Uvicorn server starting...
+INFO:     Started server process [2763813]
+INFO:     Waiting for application startup.
+2025-09-22 15:32:45,746 - INFO - HTTP Request: POST http://127.0.0.1:8000/mcp "HTTP/1.1 200 OK"
+2025-09-22 15:32:45,746 - INFO - Received session ID: 22dcd69782bb4efd8e5234ecb4b0df64
+2025-09-22 15:32:45,747 - INFO - Negotiated protocol version: 2025-06-18
+2025-09-22 15:32:45,751 - INFO - HTTP Request: POST http://127.0.0.1:8000/mcp "HTTP/1.1 202 Accepted"
+2025-09-22 15:32:45,752 - INFO - HTTP Request: GET http://127.0.0.1:8000/mcp "HTTP/1.1 200 OK"
+2025-09-22 15:32:45,754 - INFO - HTTP Request: POST http://127.0.0.1:8000/mcp "HTTP/1.1 200 OK"
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9999 (Press CTRL+C to quit)
+Starting MCP OpenAPI Proxy on 0.0.0.0:9999 with command: http://127.0.0.1:8000/mcp
+INFO:     127.0.0.1:44886 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44890 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47960 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45292 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56666 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35194 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53134 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57006 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41580 - "GET /docs HTTP/1.1" 200 OK

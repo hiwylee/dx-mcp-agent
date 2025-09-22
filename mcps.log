@@ -1,0 +1,173 @@
+2025-09-22 15:26:30,661 - INFO - Starting MCPO Server...
+2025-09-22 15:26:30,661 - INFO -   Name: MCP OpenAPI Proxy
+2025-09-22 15:26:30,661 - INFO -   Version: 1.0
+2025-09-22 15:26:30,661 - INFO -   Description: Automatically generated API from MCP Tool Schemas
+2025-09-22 15:26:30,661 - INFO -   Hostname: openwebui
+2025-09-22 15:26:30,661 - INFO -   Port: 9999
+2025-09-22 15:26:30,661 - INFO -   API Key: Provided
+2025-09-22 15:26:30,661 - INFO -   CORS Allowed Origins: ['*']
+2025-09-22 15:26:30,661 - INFO -   Path Prefix: /
+2025-09-22 15:26:30,662 - INFO - Configuring for a single StreamableHTTP MCP Server with URL http://127.0.0.1:8000/mcp
+2025-09-22 15:26:30,662 - INFO - Uvicorn server starting...
+INFO:     Started server process [2760499]
+INFO:     Waiting for application startup.
+2025-09-22 15:26:30,708 - ERROR - Failed to connect to MCP server 'MCP OpenAPI Proxy': ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/opc/mcpo/src/mcpo/main.py", line 422, in lifespan
+  |     async with client_context as (reader, writer, *_):
+  |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 474, in streamablehttp_client
+  |     async with anyio.create_task_group() as tg:
+  |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    |     yield
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    |     resp = await self._pool.handle_async_request(req)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    |     raise exc from None
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    |     response = await connection.handle_async_request(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    |     raise exc
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    |     stream = await self._connect(request)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    |     stream = await self._network_backend.connect_tcp(**kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    |     return await self._backend.connect_tcp(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    |     with map_exceptions(exc_map):
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    |     raise to_exc(exc) from exc
+    | httpcore.ConnectError: All connection attempts failed
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 405, in handle_request_async
+    |     await self._handle_post_request(ctx)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 259, in _handle_post_request
+    |     async with ctx.client.stream(
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 210, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1583, in stream
+    |     response = await self.send(
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+    |     response = await self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    |     response = await self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    |     response = await self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    |     response = await transport.handle_async_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    |     with map_httpcore_exceptions():
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    |     raise mapped_exc(message) from exc
+    | httpx.ConnectError: All connection attempts failed
+    +------------------------------------
+ERROR:      + Exception Group Traceback (most recent call last):
+  |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/starlette/routing.py", line 694, in lifespan
+  |     async with self.lifespan_context(app) as maybe_state:
+  |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 210, in __aenter__
+  |     return await anext(self.gen)
+  |            ^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/opc/mcpo/src/mcpo/main.py", line 422, in lifespan
+  |     async with client_context as (reader, writer, *_):
+  |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 474, in streamablehttp_client
+  |     async with anyio.create_task_group() as tg:
+  |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    |     yield
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    |     resp = await self._pool.handle_async_request(req)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    |     raise exc from None
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    |     response = await connection.handle_async_request(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    |     raise exc
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    |     stream = await self._connect(request)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    |     stream = await self._network_backend.connect_tcp(**kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    |     return await self._backend.connect_tcp(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    |     with map_exceptions(exc_map):
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    |     raise to_exc(exc) from exc
+    | httpcore.ConnectError: All connection attempts failed
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 405, in handle_request_async
+    |     await self._handle_post_request(ctx)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 259, in _handle_post_request
+    |     async with ctx.client.stream(
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 210, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1583, in stream
+    |     response = await self.send(
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+    |     response = await self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    |     response = await self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    |     response = await self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    |     response = await transport.handle_async_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    |     with map_httpcore_exceptions():
+    |   File "/home/opc/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/opc/mcpo/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    |     raise mapped_exc(message) from exc
+    | httpx.ConnectError: All connection attempts failed
+    +------------------------------------
+
+ERROR:    Application startup failed. Exiting.
+2025-09-22 15:26:30,713 - WARNING - Server task exited unexpectedly. Initiating shutdown.
+2025-09-22 15:26:30,713 - INFO - Initiating server shutdown...
+2025-09-22 15:26:30,713 - INFO - Server shutdown complete
+Starting MCP OpenAPI Proxy on 0.0.0.0:9999 with command: http://127.0.0.1:8000/mcp

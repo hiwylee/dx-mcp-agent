@@ -1,0 +1,248 @@
+Running:  인보이스 보류 현황을 조회
+╭──────────────────────────────── Chat request to remote agent: None ─────────────────────────────────╮
+│ (Local --> Remote)                                                                                  │
+│                                                                                                     │
+│ user message:                                                                                       │
+│  인보이스 보류 현황을 조회                                                                          │
+│                                                                                                     │
+│ performed actions by client:                                                                        │
+│ []                                                                                                  │
+│                                                                                                     │
+│ session id:                                                                                         │
+│ ocid1.genaiagentsession.oc1.ap-osaka-1.amaaaaaa7mjirbaa5jqzn4kvuzru4tuie5yxtzzumetnea6niww4cnpug3ha │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────── Chat response from remote agent ──────────────────╮
+│ (Local <-- Remote)                                                  │
+│                                                                     │
+│ agent message:                                                      │
+│ null                                                                │
+│                                                                     │
+│ required actions for client to take:                                │
+│ [                                                                   │
+│     {                                                               │
+│         "action_id": "20d686f0-b67f-414b-b85a-6cb05d66b5f6",        │
+│         "required_action_type": "FUNCTION_CALLING_REQUIRED_ACTION", │
+│         "function_call": {                                          │
+│             "name": "test_database_connection",                     │
+│             "arguments": "{}"                                       │
+│         }                                                           │
+│     }                                                               │
+│ ]                                                                   │
+│                                                                     │
+│ guardrail result:                                                   │
+│ None                                                                │
+│                                                                     │
+│                                                                     │
+╰─────────────────────────────────────────────────────────────────────╯
+[09/22/25 14:15:03]  INFO     No handler found for function: test_database_connection                              
+╭──────────────────────────────── Chat request to remote agent: None ─────────────────────────────────╮
+│ (Local --> Remote)                                                                                  │
+│                                                                                                     │
+│ user message:                                                                                       │
+│ null                                                                                                │
+│                                                                                                     │
+│ performed actions by client:                                                                        │
+│ []                                                                                                  │
+│                                                                                                     │
+│ session id:                                                                                         │
+│ ocid1.genaiagentsession.oc1.ap-osaka-1.amaaaaaa7mjirbaa5jqzn4kvuzru4tuie5yxtzzumetnea6niww4cnpug3ha │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[09/22/25 14:15:05]  ERROR    Error during agent execution: Failed to invoke chat endpoint: {'target_service':     
+                              'generative_ai_agent_runtime', 'status': 400, 'code': '400', 'opc-request-id':       
+                              '4DB0F55B30E44A87A66D449A630FC8C0/31E47BA737076BD70A101E34356BA94E/C6AAB5F3A012973824
+                              AA3C83C885A759', 'message': 'Awaiting response for required action(s), cannot proceed
+                              to chat', 'operation_name': 'chat', 'timestamp': '2025-09-22T14:15:05.551034+00:00', 
+                              'client_version': 'Oracle-PythonSDK/2.160.1', 'request_endpoint': 'POST              
+                              https://agent-runtime.generativeai.ap-osaka-1.oci.oraclecloud.com/20240531/agentEndpo
+                              ints/ocid1.genaiagentendpoint.oc1.ap-osaka-1.amaaaaaarykjadqah2zw7mxczrxoa6o3ebdneenu
+                              m4s5g5mqfk2urommiytq/actions/chat', 'logging_tips': 'To get more info on the failing 
+                              request, refer to https://docs.oracle.com/en-us/iaas/tools/python/latest/logging.html
+                              for ways to log the request/response details.', 'troubleshooting_tips': "See         
+                              https://docs.oracle.com/iaas/Content/API/References/apierrors.htm#apierrors_400__400_
+                              400 for more information about resolving this error. Also see                        
+                              https://docs.oracle.com/iaas/api/#/en/generative-ai-agents-client/20240531/AgentEndpo
+                              int/Chat for details on this operation's requirements. If you are unable to resolve  
+                              this generative_ai_agent_runtime issue, please contact Oracle support and provide    
+                              them this full error message."}                                                      
+                              ╭──────────────────────── Traceback (most recent call last) ────────────────────────╮
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/addons/adk/agent_cl │
+                              │ ient.py:770 in _invoke                                                            │
+                              │                                                                                   │
+                              │   767 │   │   """                                                                 │
+                              │   768 │   │   response: Response | None = None                                    │
+                              │   769 │   │   try:                                                                │
+                              │ ❱ 770 │   │   │   response = method(**kwargs)                                     │
+                              │   771 │   │   │   if response is None:                                            │
+                              │   772 │   │   │   │   raise UserError(                                            │
+                              │   773 │   │   │   │   │   message=error_message,                                  │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/generative_ai_agent │
+                              │ _runtime/generative_ai_agent_runtime_client.py:224 in chat                        │
+                              │                                                                                   │
+                              │   221 │   │   │   │   self.base_client.add_opc_retry_token_if_needed(header_param │
+                              │   222 │   │   │   │   self.base_client.add_opc_client_retries_header(header_param │
+                              │   223 │   │   │   │                                                               │
+                              │       retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)  │
+                              │ ❱ 224 │   │   │   return retry_strategy.make_retrying_call(                       │
+                              │   225 │   │   │   │   self.base_client.call_api,                                  │
+                              │   226 │   │   │   │   resource_path=resource_path,                                │
+                              │   227 │   │   │   │   method=method,                                              │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/retry/retry.py:308  │
+                              │ in make_retrying_call                                                             │
+                              │                                                                                   │
+                              │   305 │   │   │   │   if _should_record_body_position_for_retry:                  │
+                              │   306 │   │   │   │   │   # Attempt to save current position for file-like body   │
+                              │   307 │   │   │   │   │   _is_body_retryable, body_position =                     │
+                              │       record_body_position_for_rewind(func_kwargs.get('body'))                    │
+                              │ ❱ 308 │   │   │   │   response = func_ref(*func_args, **func_kwargs)              │
+                              │   309 │   │   │   │   time_elapsed = time.time() - start_time                     │
+                              │   310 │   │   │   │                                                               │
+                              │   311 │   │   │   │   if log_info["logger"] and log_info["debug"]:                │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/base_client.py:548  │
+                              │ in call_api                                                                       │
+                              │                                                                                   │
+                              │    545 │   │   │   │   │   │   raise                                              │
+                              │    546 │   │   else:                                                              │
+                              │    547 │   │   │   start = timer()                                                │
+                              │ ❱  548 │   │   │   response = self.request(request, allow_control_chars, operatio │
+                              │        api_reference_link)                                                        │
+                              │    549 │   │   │   end = timer()                                                  │
+                              │    550 │   │   │   self.logger.debug('time elapsed for request: {}'.format(str(en │
+                              │    551 │   │   │   return response                                                │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/circuitbreaker.py:146   │
+                              │ in wrapper                                                                        │
+                              │                                                                                   │
+                              │   143 │   │   │   │   if self.fallback_function:                                  │
+                              │   144 │   │   │   │   │   return self.fallback_function(*args, **kwargs)          │
+                              │   145 │   │   │   │   raise CircuitBreakerError(self)                             │
+                              │ ❱ 146 │   │   │   return self.call(function, *args, **kwargs)                     │
+                              │   147 │   │                                                                       │
+                              │   148 │   │   @wraps(function)                                                    │
+                              │   149 │   │   def gen_wrapper(*args, **kwargs):                                   │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/circuitbreaker.py:188   │
+                              │ in call                                                                           │
+                              │                                                                                   │
+                              │   185 │   │   :param func: Decorated function                                     │
+                              │   186 │   │   """                                                                 │
+                              │   187 │   │   with self:                                                          │
+                              │ ❱ 188 │   │   │   return func(*args, **kwargs)                                    │
+                              │   189 │                                                                           │
+                              │   190 │   def call_generator(self, func, *args, **kwargs):                        │
+                              │   191 │   │   """                                                                 │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/base_client.py:740  │
+                              │ in request                                                                        │
+                              │                                                                                   │
+                              │    737 │   │   │   │   │   self.logger.warning("Circuit Breaker state changed fro │
+                              │        {}".format(initial_circuit_breaker_state, new_circuit_breaker_state))      │
+                              │    738 │   │   │   │   self.raise_transient_service_error(request, response, serv │
+                              │        message, operation_name, api_reference_link, target_service, request_endpo │
+                              │        client_version, timestamp, deserialized_data)                              │
+                              │    739 │   │   │   else:                                                          │
+                              │ ❱  740 │   │   │   │   self.raise_service_error(request, response, service_code,  │
+                              │        operation_name, api_reference_link, target_service, request_endpoint, clie │
+                              │        timestamp, deserialized_data)                                              │
+                              │    741 │   │                                                                      │
+                              │    742 │   │   if stream:                                                         │
+                              │    743 │   │   │   if response.headers.get("content-type", "empty").lower() ==    │
+                              │        SSE_RESPONSE_HEADER_VALUE:                                                 │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/base_client.py:905  │
+                              │ in raise_service_error                                                            │
+                              │                                                                                   │
+                              │    902 │   │   return result                                                      │
+                              │    903 │                                                                          │
+                              │    904 │   def raise_service_error(self, request, response, service_code, message │
+                              │        operation_name=None, api_reference_link=None, target_service=None,         │
+                              │        request_endpoint=None, client_version=None, timestamp=None, deserialized_d │
+                              │ ❱  905 │   │   raise exceptions.ServiceError(                                     │
+                              │    906 │   │   │   response.status_code,                                          │
+                              │    907 │   │   │   service_code,                                                  │
+                              │    908 │   │   │   response.headers,                                              │
+                              ╰───────────────────────────────────────────────────────────────────────────────────╯
+                              ServiceError: {'target_service': 'generative_ai_agent_runtime', 'status': 400,       
+                              'code': '400', 'opc-request-id':                                                     
+                              '4DB0F55B30E44A87A66D449A630FC8C0/31E47BA737076BD70A101E34356BA94E/C6AAB5F3A012973824
+                              AA3C83C885A759', 'message': 'Awaiting response for required action(s), cannot proceed
+                              to chat', 'operation_name': 'chat', 'timestamp': '2025-09-22T14:15:05.551034+00:00', 
+                              'client_version': 'Oracle-PythonSDK/2.160.1', 'request_endpoint': 'POST              
+                              https://agent-runtime.generativeai.ap-osaka-1.oci.oraclecloud.com/20240531/agentEndpo
+                              ints/ocid1.genaiagentendpoint.oc1.ap-osaka-1.amaaaaaarykjadqah2zw7mxczrxoa6o3ebdneenu
+                              m4s5g5mqfk2urommiytq/actions/chat', 'logging_tips': 'To get more info on the failing 
+                              request, refer to https://docs.oracle.com/en-us/iaas/tools/python/latest/logging.html
+                              for ways to log the request/response details.', 'troubleshooting_tips': "See         
+                              https://docs.oracle.com/iaas/Content/API/References/apierrors.htm#apierrors_400__400_
+                              400 for more information about resolving this error. Also see                        
+                              https://docs.oracle.com/iaas/api/#/en/generative-ai-agents-client/20240531/AgentEndpo
+                              int/Chat for details on this operation's requirements. If you are unable to resolve  
+                              this generative_ai_agent_runtime issue, please contact Oracle support and provide    
+                              them this full error message."}                                                      
+                                                                                                                   
+                              The above exception was the direct cause of the following exception:                 
+                                                                                                                   
+                              ╭──────────────────────── Traceback (most recent call last) ────────────────────────╮
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/addons/adk/agent.py │
+                              │ :272 in run_async                                                                 │
+                              │                                                                                   │
+                              │   269 │   │   │   │   # next_user_message = None                                  │
+                              │   270 │   │   │   │                                                               │
+                              │   271 │   │   │   │   time.sleep(2)  # to avoid throttle by GenAI service         │
+                              │ ❱ 272 │   │   │   │   response = self._handle_chat(                               │
+                              │   273 │   │   │   │   │   user_message=next_user_message,                         │
+                              │   274 │   │   │   │   │   session_id=session_id,                                  │
+                              │   275 │   │   │   │   │   performed_actions=performed_actions,                    │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/addons/adk/agent.py │
+                              │ :490 in _handle_chat                                                              │
+                              │                                                                                   │
+                              │   487 │   │   """                                                                 │
+                              │   488 │   │   self._log_chat_request(user_message, session_id, performed_actions) │
+                              │   489 │   │                                                                       │
+                              │ ❱ 490 │   │   response = self.client.chat(                                        │
+                              │   491 │   │   │   agent_endpoint_id=self.agent_endpoint_id,                       │
+                              │   492 │   │   │   session_id=session_id,                                          │
+                              │   493 │   │   │   user_message=user_message,                                      │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/addons/adk/agent_cl │
+                              │ ient.py:232 in chat                                                               │
+                              │                                                                                   │
+                              │   229 │   │                                                                       │
+                              │   230 │   │   logger.debug(f"Invoking chat endpoint with data: {chat_details}")   │
+                              │   231 │   │                                                                       │
+                              │ ❱ 232 │   │   chat_response: Response = self._invoke(                             │
+                              │   233 │   │   │   method=self._rt_client.chat,                                    │
+                              │   234 │   │   │   success_message="Chat succeeded",                               │
+                              │   235 │   │   │   error_message="Failed to invoke chat endpoint",                 │
+                              │                                                                                   │
+                              │ /home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/oci/addons/adk/agent_cl │
+                              │ ient.py:788 in _invoke                                                            │
+                              │                                                                                   │
+                              │   785 │   │   │   return response                                                 │
+                              │   786 │   │                                                                       │
+                              │   787 │   │   except ServiceError as e:                                           │
+                              │ ❱ 788 │   │   │   raise AgentError(                                               │
+                              │   789 │   │   │   │   message=f"{error_message}: {str(e)}",                       │
+                              │   790 │   │   │   │   response=response,                                          │
+                              │   791 │   │   │   ) from e                                                        │
+                              ╰───────────────────────────────────────────────────────────────────────────────────╯
+                              AgentError: Failed to invoke chat endpoint: {'target_service':                       
+                              'generative_ai_agent_runtime', 'status': 400, 'code': '400', 'opc-request-id':       
+                              '4DB0F55B30E44A87A66D449A630FC8C0/31E47BA737076BD70A101E34356BA94E/C6AAB5F3A012973824
+                              AA3C83C885A759', 'message': 'Awaiting response for required action(s), cannot proceed
+                              to chat', 'operation_name': 'chat', 'timestamp': '2025-09-22T14:15:05.551034+00:00', 
+                              'client_version': 'Oracle-PythonSDK/2.160.1', 'request_endpoint': 'POST              
+                              https://agent-runtime.generativeai.ap-osaka-1.oci.oraclecloud.com/20240531/agentEndpo
+                              ints/ocid1.genaiagentendpoint.oc1.ap-osaka-1.amaaaaaarykjadqah2zw7mxczrxoa6o3ebdneenu
+                              m4s5g5mqfk2urommiytq/actions/chat', 'logging_tips': 'To get more info on the failing 
+                              request, refer to https://docs.oracle.com/en-us/iaas/tools/python/latest/logging.html
+                              for ways to log the request/response details.', 'troubleshooting_tips': "See         
+                              https://docs.oracle.com/iaas/Content/API/References/apierrors.htm#apierrors_400__400_
+                              400 for more information about resolving this error. Also see                        
+                              https://docs.oracle.com/iaas/api/#/en/generative-ai-agents-client/20240531/AgentEndpo
+                              int/Chat for details on this operation's requirements. If you are unable to resolve  
+                              this generative_ai_agent_runtime issue, please contact Oracle support and provide    
+                              them this full error message."}                                                      

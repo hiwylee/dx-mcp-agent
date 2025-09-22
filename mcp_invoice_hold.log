@@ -1,0 +1,52 @@
+nohup: ignoring input
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 15:32:31] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2763677]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+INFO:     127.0.0.1:59524 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59540 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:59552 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59564 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43412 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48368 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48376 - "GET /docs HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54364 - "GET /docs HTTP/1.1" 404 Not Found

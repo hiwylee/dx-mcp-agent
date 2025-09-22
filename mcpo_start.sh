@@ -1,0 +1,1 @@
+nohup mcpo --port 9999 --api-key "top-secret" --server-type streamable-http -- http://127.0.0.1:8000/mcp > mcps.log 2>&1 &

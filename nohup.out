@@ -1,0 +1,372 @@
+Using CPython 3.12.11
+Creating virtual environment at: .venv
+Installed 75 packages in 285ms
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 06:16:51] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2594815]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+INFO:     127.0.0.1:34884 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34896 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:34902 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34904 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52762 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:40756 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44198 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44202 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44204 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54854 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54858 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54864 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47936 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47938 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47950 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51048 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51052 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51058 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41800 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41812 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56404 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56416 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36932 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36940 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58554 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58560 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44812 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58918 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58928 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59908 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42668 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57946 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43428 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43434 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:37364 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56148 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56160 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47854 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37968 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60004 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60436 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60452 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39002 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42092 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42094 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39902 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42274 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42280 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:42280 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36722 - "DELETE /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42280 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42280 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:42280 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41192 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56470 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56484 - "GET /openapi.json HTTP/1.1" 404 Not Found
+error: Failed to spawn: `mcp_invoice_holds`
+  Caused by: No such file or directory (os error 2)
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 13:26:05] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2709189]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): [errno 98] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 13:27:35] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2709687]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+INFO:     127.0.0.1:34256 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34282 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34272 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:34288 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33538 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34742 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50780 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47458 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51062 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51064 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51674 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51686 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39210 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35956 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60676 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60548 - "DELETE /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49692 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49698 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57652 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57660 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51782 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55574 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60048 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60064 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38616 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38626 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54408 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54416 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41758 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41764 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46746 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46752 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46242 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48992 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39498 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39504 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47086 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47100 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42008 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35220 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35222 - "POST /mcp HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54364 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54374 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46402 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60786 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60802 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35426 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35430 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36266 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44816 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44820 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56336 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56342 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41420 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38966 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53908 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:37448 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51708 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51724 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51728 - "GET /openapi.json HTTP/1.1" 404 Not Found
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 15:13:21] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2752256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): [errno 98] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Invoice Holding Management               │
+│               📦 Transport:       Streamable-HTTP                          │
+│               🔗 Server URL:      http://127.0.0.1:8000/mcp                │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.3                                   │
+│               🤝 MCP SDK version: 1.14.1                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[09/22/25 15:14:40] INFO     Starting MCP server 'Invoice Holding server.py:1572
+                             Management' with transport                         
+                             'streamable-http' on                               
+                             http://127.0.0.1:8000/mcp                          
+INFO:     Started server process [2752909]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+🚀 Invoice Holding Management Server 시작
+🔗 Oracle DB 연결 정보:
+   - 사용자: apps
+   - DSN: 161.33.6.86:1521/ebsdb
+🌐 MCP Server: http://localhost:8000
+
+🎯 MCP 서버 시작 중...
+⚠️ 연결 테스트 중 오류: 'FunctionTool' object is not callable
+INFO:     127.0.0.1:53152 - "GET /openapi.json HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+ERROR:    Cancel 0 running task(s), timeout graceful shutdown exceeded
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2752909]
+Traceback (most recent call last):
+  File "/home/opc/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/opc/dx-mcp-agent/mcp_invoice_holds.py", line 305, in <module>
+    mcp.run(transport="streamable-http", port=int(MCP_SERVER_PORT))
+  File "/home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/fastmcp/server/server.py", line 378, in run
+    anyio.run(
+  File "/home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/anyio/_core/_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/dx-mcp-agent/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
