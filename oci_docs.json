@@ -1,0 +1,20 @@
+{
+    "mcpServers": {
+        "oci-documentation-mcp-server": {
+          "command": "uvx",
+          "args": [
+            "--from",
+            "oci-documentation-mcp-server@latest",
+            "python",
+            "-m",
+            "oci_documentation_mcp_server.server"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          },
+          "disabled": false,
+          "autoApprove": []
+      }
+    }
+  }
+  

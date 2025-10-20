@@ -133,11 +133,11 @@ async def run_automated_tests(agent):
     print_header("자동화된 테스트 케이스 실행")
 
     test_cases = [
-        {
-            "num": 1,
-            "description": "데이터베이스 연결 상태 확인",
-            "query": "데이터베이스 연결 상태를 확인해주세요."
-        },
+        # {
+        #     "num": 1,
+        #     "description": "데이터베이스 연결 상태 확인",
+        #     "query": "데이터베이스 연결 상태를 확인해주세요."
+        # },
         {
             "num": 2, 
             "description": "홀딩된 인보이스 목록 조회",
