@@ -232,6 +232,9 @@ def list_holding_invoices(sql: str = HOLD_LIST_SQL, limit: int = 20) -> Generato
         safe_close_connection(connection)
 
 class Pipeline:
+    class Valves(BaseModel):
+        name: str = "List Holing Invoice Pipeline"
+        
     def __init__(self):
         self.name = "List Holing Invoice Pipeline"
 
